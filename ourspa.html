@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Monis Meditation Spa — Our Spa</title>
+    <meta name="description" content="Discover Monis Meditation Spa — treatments, serene spaces, and mindful relaxation." />
+    <style>
+        :root{
+            --accent:#6aa84f;
+            --muted:#707070;
+            --bg:#fbfbfb;
+            --card:#ffffff;
+            --radius:12px;
+            --maxw:1100px;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color:#222;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            background:linear-gradient(180deg,#fbfbfb 0%,#f7fff0 100%);
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            line-height:1.45;
+            padding:32px 20px;
+            display:flex;
+            justify-content:center;
+        }
+        .wrap{max-width:var(--maxw);width:100%}
+        header{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:16px;
+            margin-bottom:28px;
+        }
+        .brand{
+            display:flex;
+            gap:12px;
+            align-items:center;
+            text-decoration:none;
+            color:inherit;
+        }
+        .logo{
+            width:48px;height:48px;border-radius:12px;
+            background:linear-gradient(135deg,var(--accent),#2b7a2b);
+            display:flex;align-items:center;justify-content:center;
+            color:#fff;font-weight:700;font-size:20px;
+            box-shadow:0 4px 14px rgba(102,153,51,0.18);
+        }
+        nav{display:flex;gap:14px;align-items:center}
+        nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+        nav a:hover{background:rgba(0,0,0,0.04);color:#222}
+        .cta{background:var(--accent);color:#fff;padding:9px 14px;border-radius:10px;text-decoration:none}
+        .hero{
+            display:grid;
+            grid-template-columns:1fr 420px;
+            gap:28px;
+            align-items:center;
+            margin-bottom:28px;
+        }
+        .hero-card{
+            background:linear-gradient(180deg,var(--card),#f8fff2);
+            padding:28px;border-radius:var(--radius);
+            box-shadow:0 8px 30px rgba(40,80,40,0.06);
+        }
+        h1{margin:0 0 10px;font-size:28px}
+        p.lead{margin:0 0 18px;color:var(--muted)}
+        .features{display:flex;gap:10px;flex-wrap:wrap}
+        .chip{background:#fff;padding:8px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.04);font-size:14px}
+        .visual{
+            height:260px;border-radius:var(--radius);
+            background:
+                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.6), transparent 8%),
+                linear-gradient(135deg,#e9f7e9,#f6fff6);
+            display:flex;align-items:center;justify-content:center;
+            box-shadow:inset 0 -8px 30px rgba(0,0,0,0.02);
+            color:var(--accent);
+            font-weight:600;
+            font-size:16px;
+            padding:18px;
+            text-align:center;
+        }
+        section{margin-bottom:22px}
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:14px;
+        }
+        .card{
+            background:var(--card);
+            border-radius:12px;padding:16px;
+            box-shadow:0 6px 20px rgba(20,40,20,0.04);
+        }
+        .service h3{margin:0 0 8px;font-size:16px}
+        .service p{margin:0;color:var(--muted);font-size:14px}
+        footer{
+            display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px;color:var(--muted);
+            font-size:14px;
+        }
+        .small{font-size:13px;color:var(--muted)}
+        /* responsive */
+        @media (max-width:920px){
+            .hero{grid-template-columns:1fr}
+            nav{display:none}
+        }
+        @media (max-width:520px){
+            body{padding:20px}
+            .logo{width:44px;height:44px}
+        }
+        /* simple accessible focus */
+        a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(106,168,79,0.18);outline-offset:2px}
+        /* contact form */
+        form{display:grid;gap:10px}
+        input,textarea{padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);font-size:14px}
+        button{background:var(--accent);color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
+    </style>
+</head>
+<body>
+    <div class="wrap" role="main">
+        <header>
+            <a class="brand" href="#" aria-label="Monis Meditation Spa home">
+                <div class="logo" aria-hidden="true">M</div>
+                <div>
+                    <div style="font-weight:700">Monis Meditation Spa</div>
+                    <div style="font-size:12px;color:var(--muted)">Our Spa</div>
+                </div>
+            </a>
+
+            <nav aria-label="Primary">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#amenities">Amenities</a>
+                <a href="#contact" class="cta">Book a Visit</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-card">
+                    <h1 id="hero-title">A calm place to restore balance</h1>
+                    <p class="lead">Healing treatments, mindful meditation, and a quiet atmosphere designed to help you relax — daily appointments and bespoke packages.</p>
+                    <div class="features" aria-hidden="false">
+                        <div class="chip">Guided Meditation</div>
+                        <div class="chip">Aromatherapy</div>
+                        <div class="chip">Massage & Bodywork</div>
+                        <div class="chip">Private Rooms</div>
+                    </div>
+                    <div style="margin-top:18px;display:flex;gap:10px">
+                        <a href="#contact" class="cta">Book Now</a>
+                        <a href="#services" style="padding:9px 12px;border-radius:10px;background:transparent;border:1px solid rgba(0,0,0,0.06);text-decoration:none;color:var(--muted)">See Services</a>
+                    </div>
+                </div>
+
+                <div class="visual" role="img" aria-label="Soothing spa illustration">
+                    <svg width="140" height="140" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <g fill="#2b7a2b">
+                            <path d="M32 6c6.6 0 12 5.4 12 12 0 8-12 20-12 20S20 26 20 18c0-6.6 5.4-12 12-12z"/>
+                            <circle cx="46" cy="40" r="4"/>
+                            <circle cx="18" cy="44" r="3"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <section id="about" aria-labelledby="about-title">
+                <h2 id="about-title" style="font-size:20px;margin:0 0 10px">About Our Spa</h2>
+                <p class="small" style="margin:0 0 12px">
+                    Monis Meditation Spa offers curated wellness experiences combining traditional therapies with modern mindfulness. Our team creates personalized sessions for every guest.
+                </p>
+            </section>
+
+            <section id="services" aria-labelledby="services-title">
+                <h2 id="services-title" style="font-size:18px;margin:0 0 12px">Featured Services</h2>
+                <div class="grid">
+                    <article class="card service">
+                        <h3>Restorative Massage</h3>
+                        <p>Deep relaxation to release tension and improve circulation. 60–90 minutes sessions.</p>
+                    </article>
+                    <article class="card service">
+                        <h3>Guided Meditation</h3>
+                        <p>Small-group or private sessions to cultivate calm and mental clarity.</p>
+                    </article>
+                    <article class="card service">
+                        <h3>Aroma & Sound Therapy</h3>
+                        <p>Multi-sensory treatments combining essential oils and gentle sound bowls.</p>
+                    </article>
+                    <article class="card service">
+                        <h3>Mindful Movement</h3>
+                        <p>Slow-flow classes focusing on breath, mobility, and restorative postures.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="amenities" aria-labelledby="amenities-title">
+                <h2 id="amenities-title" style="font-size:18px;margin:0 0 12px">Amenities</h2>
+                <div class="grid">
+                    <div class="card"><strong>Private Treatment Rooms</strong><div class="small">Quiet, dim-lit rooms with individualized climate control.</div></div>
+                    <div class="card"><strong>Herbal Tea Lounge</strong><div class="small">Selection of calming teas to enjoy before or after your session.</div></div>
+                    <div class="card"><strong>Changing & Shower</strong><div class="small">Clean, accessible facilities and secure lockers.</div></div>
+                    <div class="card"><strong>Retail</strong><div class="small">Natural products and curated items for self-care at home.</div></div>
+                </div>
+            </section>
+
+            <section id="contact" aria-labelledby="contact-title">
+                <h2 id="contact-title" style="font-size:18px;margin:0 0 12px">Contact & Booking</h2>
+                <div style="display:grid;grid-template-columns:1fr 320px;gap:14px">
+                    <div class="card">
+                        <form aria-label="Booking form">
+                            <label>
+                                <div style="font-size:14px;margin-bottom:6px">Name</div>
+                                <input type="text" name="name" placeholder="Your full name" required>
+                            </label>
+                            <label>
+                                <div style="font-size:14px;margin-bottom:6px">Email</div>
+                                <input type="email" name="email" placeholder="you@example.com" required>
+                            </label>
+                            <label>
+                                <div style="font-size:14px;margin-bottom:6px">Message</div>
+                                <textarea name="message" rows="4" placeholder="Preferred date, service, questions"></textarea>
+                            </label>
+                            <div style="display:flex;gap:8px;margin-top:6px">
+                                <button type="submit">Request Appointment</button>
+                                <button type="button" style="background:#fff;border:1px solid rgba(0,0,0,0.06);color:var(--muted)">Call: (555) 123‑4567</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <aside class="card small" style="display:flex;flex-direction:column;gap:8px">
+                        <div><strong>Location</strong><div class="small">123 Serenity Lane · Suite 4 · Your City</div></div>
+                        <div><strong>Hours</strong><div class="small">Mon–Sat: 9am–8pm · Sun: 10am–6pm</div></div>
+                        <div><strong>Note</strong><div class="small">Arrive 10 minutes early; late arrivals may reduce session time.</div></div>
+                    </aside>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="small">© <span id="year"></span> Monis Meditation Spa</div>
+            <div style="display:flex;gap:10px">
+                <a href="#" class="small" aria-label="Instagram">Instagram</a>
+                <a href="#" class="small" aria-label="Facebook">Facebook</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // small utilities
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // stub: handle the booking form submit (no backend)
+        document.querySelectorAll('form').forEach(f=>{
+            f.addEventListener('submit', e=>{
+                e.preventDefault();
+                alert('Thanks — your request was received. We will contact you soon.');
+                f.reset();
+            });
+        });
+    </script>
+</body>
+</html></div>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Moni's Meditation Spa</title>
+    <meta name="description" content="Moni's Meditation Spa — calm, restorative meditation sessions and wellness services." />
+    <meta name="theme-color" content="#6b8e6b" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Moni's Meditation Spa" />
+    <meta property="og:description" content="Calm, restorative meditation sessions and wellness services." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="images/og-image.jpg" />
+
+    <!-- Place for favicon(s) -->
+    <!-- <link rel="icon" href="favicon.ico" /> -->
+
+    <!-- Stylesheet (create styles.css in the same folder) -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Basic structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HealthAndBeautyBusiness",
+        "name": "Moni's Meditation Spa",
+        "url": "https://example.com/",
+        "description": "Calm, restorative meditation sessions and wellness services."
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header role="banner" class="site-header">
+        <div class="container">
+            <a class="brand" href="/">
+                <!-- Replace with an <img> for a logo if available -->
+                <strong>Moni's Meditation Spa</strong>
+            </a>
+
+            <nav role="navigation" aria-label="Main navigation" class="main-nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" role="main">
+        <section class="hero" aria-label="Hero">
+            <div class="container">
+                <h1>Find calm, restore balance</h1>
+                <p>Guided meditation, sound baths, and mindful coaching in a peaceful, welcoming space.</p>
+                <p><a class="btn" href="#schedule">View Schedule</a></p>
+            </div>
+        </section>
+
+        <section id="about" class="container" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <p>Short paragraph about the spa, instructors, and the mission. Replace with real content.</p>
+        </section>
+
+        <section id="services" class="container" aria-labelledby="services-heading">
+            <h2 id="services-heading">Services</h2>
+            <ul>
+                <li>Guided Meditation</li>
+                <li>Private Sessions</li>
+                <li>Sound Baths</li>
+                <li>Workshops & Retreats</li>
+            </ul>
+        </section>
+
+        <section id="schedule" class="container" aria-labelledby="schedule-heading">
+            <h2 id="schedule-heading">Schedule</h2>
+            <p>Placeholder for class schedule or booking widget.</p>
+        </section>
+
+        <section id="contact" class="container" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <address>
+                <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 (234) 567‑890</a></p>
+            </address>
+        </section>
+    </main>
+
+    <footer role="contentinfo" class="site-footer">
+        <div class="container">
+            <small>&copy; <span id="year"></span> Moni's Meditation Spa. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <!-- Small script for dynamic year and basic interactivity -->
+    <script>
+        // Insert current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Simple mobile menu toggle (requires markup & styles if used)
+        // const btn = document.querySelector('.menu-toggle');
+        // const nav = document.querySelector('.main-nav');
+        // btn && btn.addEventListener('click', () => nav.classList.toggle('open'));
+    </script>
+</body>
+</html>

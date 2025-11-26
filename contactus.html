@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact Us — Monis Meditation Spa</title>
+    <style>
+        :root{
+            --accent:#7db68f;
+            --muted:#6b6b6b;
+            --bg:#fbfbfb;
+            --card:#ffffff;
+            --maxw:1000px;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        html,body{height:100%;}
+        body{
+            margin:0;
+            background:linear-gradient(180deg,#f7faf7 0%, #fbfbfb 100%);
+            color:#183233;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:32px;
+        }
+        .container{
+            max-width:var(--maxw);
+            width:100%;
+            background:var(--card);
+            box-shadow:0 8px 30px rgba(24,50,51,0.08);
+            border-radius:12px;
+            overflow:hidden;
+            display:grid;
+            grid-template-columns:1fr 380px;
+            gap:0;
+        }
+        header.hero{
+            grid-column:1/-1;
+            padding:28px 28px;
+            border-bottom:1px solid #eef3ee;
+            display:flex;
+            align-items:center;
+            gap:16px;
+        }
+        header .logo{
+            width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#5aa37a);
+            display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;
+            box-shadow:0 4px 18px rgba(123,182,143,0.18);
+        }
+        header h1{font-size:18px;margin:0;}
+        header p{margin:0;color:var(--muted);font-size:13px;}
+        .main{
+            padding:28px;
+        }
+        form{
+            display:grid;
+            gap:12px;
+            grid-template-columns:repeat(2,1fr);
+        }
+        .full{grid-column:1/-1;}
+        label{font-size:13px;color:var(--muted);display:block;margin-bottom:6px;}
+        input[type="text"],input[type="email"],input[type="tel"],textarea,select,input[type="date"],input[type="time"]{
+            width:100%;
+            padding:10px 12px;
+            border:1px solid #e6e9e6;
+            border-radius:8px;
+            background:transparent;
+            font-size:14px;
+            box-sizing:border-box;
+        }
+        textarea{min-height:110px;resize:vertical;}
+        .controls{display:flex;gap:8px;align-items:center;}
+        .btn{
+            background:var(--accent);
+            color:white;border:0;padding:10px 14px;border-radius:8px;font-weight:600;cursor:pointer;
+            box-shadow:0 6px 18px rgba(125,182,143,0.18);
+        }
+        .info{
+            padding:24px;
+            background:linear-gradient(180deg, #fafdfb 0%, #ffffff 100%);
+            border-left:1px solid #eef3ee;
+        }
+        .contact-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;}
+        .contact-icon{width:36px;height:36;border-radius:8px;background:#eaf5ee;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;}
+        small{display:block;color:var(--muted);font-size:13px;margin-top:6px;}
+        .map{width:100%;height:160px;border-radius:8px;overflow:hidden;margin-top:8px;border:1px solid #eef3ee;}
+        .success{padding:10px;border-radius:8px;background:#e8fbef;color:#1f6d3a;font-weight:600;margin-top:10px;}
+        @media (max-width:940px){
+            .container{grid-template-columns:1fr; padding:0;}
+            .info{border-left:none;border-top:1px solid #eef3ee;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container" role="region" aria-label="Contact Monis Meditation Spa">
+        <header class="hero">
+            <div class="logo" aria-hidden="true">M</div>
+            <div>
+                <h1>Contact Monis Meditation Spa</h1>
+                <p>Book appointments • Inquiries • Gift cards</p>
+            </div>
+        </header>
+
+        <main class="main" id="main">
+            <form id="contactForm" novalidate>
+                <div class="full">
+                    <label for="service">I'm interested in</label>
+                    <select id="service" name="service" required>
+                        <option value="">Choose a service</option>
+                        <option>Guided Meditation Session</option>
+                        <option>Massage Therapy</option>
+                        <option>Sound Bath</option>
+                        <option>Corporate Wellness</option>
+                        <option>Gift Cards</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="name">Full name</label>
+                    <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                </div>
+
+                <div>
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555"
+                                 pattern="^[0-9+\-\s()]*$" />
+                </div>
+
+                <div>
+                    <label for="date">Preferred date</label>
+                    <input id="date" name="date" type="date" />
+                </div>
+
+                <div>
+                    <label for="time">Preferred time</label>
+                    <input id="time" name="time" type="time" />
+                </div>
+
+                <div class="full">
+                    <label for="message">Message or notes</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your needs or special requests"></textarea>
+                </div>
+
+                <div class="full controls" style="justify-content:space-between;">
+                    <label style="display:flex;align-items:center;gap:8px;font-size:13px;">
+                        <input id="consent" name="consent" type="checkbox" required />
+                        <span>I agree to be contacted about my appointment</span>
+                    </label>
+
+                    <div style="display:flex;gap:8px;align-items:center;">
+                        <button class="btn" type="submit">Send request</button>
+                        <button type="reset" style="background:#f1f5f2;border:1px solid #e6e9e6;padding:8px 12px;border-radius:8px;cursor:pointer;">Reset</button>
+                    </div>
+                </div>
+
+                <div class="full" id="status" aria-live="polite"></div>
+            </form>
+        </main>
+
+        <aside class="info" aria-label="Contact details">
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                    <strong>Monis Meditation Spa</strong>
+                    <small>123 Tranquil Lane, Suite 4<br/>Your City, State ZIP</small>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                    <strong>Phone</strong>
+                    <small><a href="tel:+15555550123">+1 (555) 555-0123</a></small>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                    <strong>Email</strong>
+                    <small><a href="mailto:hello@monismeditationspa.example">hello@monismeditationspa.example</a></small>
+                </div>
+            </div>
+
+            <div>
+                <strong>Business hours</strong>
+                <small>Mon–Fri: 9:00 AM – 7:00 PM<br/>Sat: 10:00 AM – 5:00 PM<br/>Sun: Closed</small>
+            </div>
+
+            <div style="margin-top:12px;">
+                <strong>Location</strong>
+                <div class="map" role="img" aria-label="Map to Monis Meditation Spa">
+                    <iframe
+                        title="Map"
+                        src="https://www.google.com/maps?q=Monis+Meditation+Spa&output=embed"
+                        width="100%" height="100%" style="border:0" loading="lazy"></iframe>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        (function(){
+            const form = document.getElementById('contactForm');
+            const status = document.getElementById('status');
+
+            function showMessage(text, success = true){
+                status.innerHTML = '<div class="' + (success ? 'success' : '') + '">' + text + '</div>';
+            }
+
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                // basic client-side validation
+                if(!form.checkValidity()){
+                    showMessage('Please complete required fields.', false);
+                    return;
+                }
+                // gather form data
+                const data = new FormData(form);
+                const payload = {};
+                data.forEach((v,k)=>payload[k]=v);
+
+                // Replace below with real submit (fetch to your API) in production.
+                console.log('Contact request payload:', payload);
+                showMessage('Thank you — your request was sent. We will contact you shortly.');
+
+                form.reset();
+            });
+        })();
+    </script>
+</body>
+</html>
