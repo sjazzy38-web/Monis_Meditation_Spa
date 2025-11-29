@@ -1,110 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moni's Meditation & Massage Spa</title>
-    <meta name="description" content="Moni's Meditation & Massage Spa — Escape Time. Embrace Tranquility.." />
-    <meta name="theme-color" content="#6b8e6b" />
-
-    <!-- Open Graph / Social -->
-    <meta property="og:title" content="Moni's Meditation & Massage Spa" />
-    <meta property="og:description" content="Restorative meditation and wellness services." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://example.com/" />
-    <meta property="og:image" content="images/og-image.jpg" />
-
-    <!-- Place for favicon(s) -->
-    <!-- <link rel="icon" href="favicon.ico" /> -->
-
-    <!-- Stylesheet (create styles.css in the same folder) -->
-    <link rel="stylesheet" href="CSS/style.css" />
-
-    <!-- Basic structured data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "HealthAndBeautyBusiness",
-        "name": "Moni's Meditation & Massage Spa",
-        "url": "https://example.com/",
-        "description": "Calm, restorative meditation sessions and wellness services."
-    }
-    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c5f4f 0%, #1a3a32 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        
+        nav {
+            background: #f4f4f4;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #2c5f4f;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            color: #1a3a32;
+        }
+        
+        .hero {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23e8f5f0" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5em;
+            color: #2c5f4f;
+            margin-bottom: 20px;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .service-card h3 {
+            color: #2c5f4f;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        footer {
+            background: #1a3a32;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header role="banner" class="site-header">
-        <div class="container">
-            <a class="brand" href="/">
-                <!-- Replace with an <img> for a logo if available -->
-                <strong>Moni's Meditation & Massage Spa</strong>
-            </a>
-
-            <nav role="navigation" aria-label="Main navigation" class="main-nav">
-                <ul>
-                    <li><a href="our spa.html">Our Spa</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="schedule.html>Schedule</a></li>
-                    <li><a href="contactus.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <h1>Moni's Meditation Spa</h1>
+        <p>Sanctuary for Mind, Body & Soul</p>
     </header>
-
-    <main id="main" role="main">
-        <section class="hero" aria-label="Hero">
-            <div class="container">
-                <h1>Find calm, restore balance</h1>
-                <p>Guided meditation, sound baths, and mindful coaching in a peaceful, welcoming space.</p>
-                <p><a class="btn" href="schedule.html">View Schedule</a></p>
-            </div>
-        </section>
-
-        <section id="about" class="container" aria-labelledby="about-heading">
-            <h2 id="about-heading">About</h2>
-            <p>Short paragraph about the spa, instructors, and the mission. Replace with real content.</p>
-        </section>
-
-        <section id="services" class="container" aria-labelledby="services-heading">
-            <h2 id="services-heading">Services</h2>
-            <ul>
-                <li>Vibration Sound Meditation</li>
-                <li>Raindrop Sessions</li>
-                <li>Optic Stress Therapy</li>
-                <li>Spa packages & Retreats</li>
-            </ul>
-        </section>
-
-        <section id="schedule" class="container" aria-labelledby="schedule-heading">
-            <h2 id="schedule-heading">Schedule</h2>
-            <p>Placeholder for class schedule or booking widget.</p>
-        </section>
-
-        <section id="contact" class="container" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">Contact</h2>
-            <address>
-                <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
-                <p>Phone: <a href="tel:+1234567890">+1 (234) 567‑890</a></p>
-            </address>
-        </section>
-    </main>
-
-    <footer role="contentinfo" class="site-footer">
-        <div class="container">
-            <small>&copy; <span id="year"></span> Moni's Meditation Spa. All rights reserved.</small>
+    
+    <nav>
+        <a href="services.">Services</a>
+        <a href="ourspa.html">About</a>
+        <a href="contactus">Contact</a>
+        <a href="index.html">Home Page</a>
+    </nav>
+    
+    <section class="hero">
+        <h2>Escape. Relax. Rejuvenate.</h2>
+        <p>Experience tranquility and healing in our luxurious spa sanctuary</p>
+    </section>
+    
+    <section id="services" class="services">
+        <div class="service-card">
+            <h3>🧘 Meditation</h3>
+            <p>Guided meditation sessions to calm your mind and restore inner peace.</p>
         </div>
+        <div class="service-card">
+            <h3>💆 Swedish Massage</h3>
+            <p>Traditional massage therapy to relieve tension and promote wellness.</p>
+        </div>
+        <div class="service-card">
+            <h3>🌿 Holistic Healing</h3>
+            <p>Natural therapies combining aromatherapy and energy balancing.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Moni's Meditation Spa. All rights reserved.</p>
+        <p>Contact: info@monispa.com | Phone: (555) 123-4567</p>
     </footer>
-
-    <!-- Small script for dynamic year and basic interactivity -->
-    <script>
-        // Insert current year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Simple mobile menu toggle (requires markup & styles if used)
-        // const btn = document.querySelector('.menu-toggle');
-        // const nav = document.querySelector('.main-nav');
-        // btn && btn.addEventListener('click', () => nav.classList.toggle('open'));
-    </script>
 </body>
 </html>
